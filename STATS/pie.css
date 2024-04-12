@@ -1,0 +1,65 @@
+
+.logo{
+    margin-top: 20px;
+    margin-left: 20px; 
+    width: 170px;
+}
+
+.titlee{
+    margin-top: 50px;
+    margin-left: 450px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pie {
+    --w:350px;
+    
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    place-content: center;
+    margin-top: 60px;
+    margin-left: 200px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .pie:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+
+  .piie {
+    --w:350px;
+    
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    place-content: center;
+    margin-top: 80px;
+    margin-left: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .piie:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+
+
+  
