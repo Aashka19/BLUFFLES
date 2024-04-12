@@ -1,0 +1,89 @@
+*{
+    font-family:oswald ;
+    color:white;
+    background-color: black;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    width: 50%;
+    height:100vh;
+    background-image:url("attend.png");
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login{
+    width:50%;
+    height:100vh;
+    padding: 20px;
+    background-color: black;
+}
+
+
+form{
+    width: 100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+     
+}
+
+input{
+    width:60%;
+    padding:10px;
+    margin-bottom:10px;
+    margin-left:30px ;
+    margin-right:30px;
+    border: 1px solid white;
+    border-radius:10px;
+    
+}
+
+button {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 40px;
+    margin-left:30px;
+    margin-right:30px;
+    margin-top: 10px;;
+    background-color:#6675df;
+    color: #fff;
+    border: none;
+    border-radius:10px;
+}
+
+h1{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+button:hover{
+    background-color:rgb(101, 99, 99);
+}
+a{
+    position: relative;
+    left:120px;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#google{
+    color:rgb(137, 136, 135);
+     
+    font-size: 15px;
+}
+
+ 

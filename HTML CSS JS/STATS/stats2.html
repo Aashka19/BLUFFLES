@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        // Make an AJAX request to fetch data from the backend
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'backend/data_endpoint', true);
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            // Parse the JSON response
+            var responseData = JSON.parse(xhr.responseText);
+            // Convert the received data to Google Charts DataTable format
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'attendance');
+            data.addColumn('number', 'classes attneded');
+            responseData.forEach(function(item) {
+              data.addRow([item.task, item.hours]);
+            });
+
+            var options = {
+              title: 'My Attendance',
+              is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          } else {
+            console.error('Request failed. Status:', xhr.status);
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
